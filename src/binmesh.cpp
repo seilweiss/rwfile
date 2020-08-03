@@ -17,7 +17,7 @@ UInt32 BinMesh::TotalIndices() const
     return total;
 }
 
-void BinMesh::Read(Chunk *chunk, ChunkHeader *header, Stream *stream)
+void BinMesh::Read(Chunk *chunk, ChunkHeader *, Stream *stream)
 {
     BinMesh *binmesh = (BinMesh *)chunk;
     UInt32 numMeshes, totalIndicesInMesh;

@@ -2,9 +2,8 @@
 
 namespace Rw
 {
-void Clump::Struct::Read(Chunk *chunk, ChunkHeader *header, Stream *stream)
+void Clump::Struct::Read(Chunk *, ChunkHeader *, Stream *stream)
 {
-    Struct *struc = (Struct *)chunk;
     Int32 numAtomics, numLights, numCameras;
 
     stream->Read(&numAtomics);

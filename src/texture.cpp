@@ -2,7 +2,7 @@
 
 namespace Rw
 {
-void Texture::Struct::Read(Chunk *chunk, ChunkHeader *header, Stream *stream)
+void Texture::Struct::Read(Chunk *chunk, ChunkHeader *, Stream *stream)
 {
     Struct *struc = (Struct *)chunk;
     UInt32 filterAndAddress;

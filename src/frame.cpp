@@ -2,7 +2,7 @@
 
 namespace Rw
 {
-void FrameList::Struct::Read(Chunk *chunk, ChunkHeader *header, Stream *stream)
+void FrameList::Struct::Read(Chunk *chunk, ChunkHeader *, Stream *stream)
 {
     Struct *struc = (Struct *)chunk;
     Int32 numFrames;

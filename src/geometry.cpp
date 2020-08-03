@@ -2,7 +2,7 @@
 
 namespace Rw
 {
-void Geometry::Struct::Read(Chunk *chunk, ChunkHeader *header, Stream *stream)
+void Geometry::Struct::Read(Chunk *chunk, ChunkHeader *, Stream *stream)
 {
     Struct *struc = (Struct *)chunk;
     Int32 numTriangles, numMorphTargets;
@@ -188,9 +188,8 @@ Geometry::Struct *Geometry::GetStruct() const
     return (Struct *)GetChildByType(ID_STRUCT);
 }
 
-void GeometryList::Struct::Read(Chunk *chunk, ChunkHeader *header, Stream *stream)
+void GeometryList::Struct::Read(Chunk *, ChunkHeader *, Stream *stream)
 {
-    Struct *struc = (Struct *)chunk;
     Int32 numGeoms;
 
     stream->Read(&numGeoms);

@@ -4,7 +4,7 @@
 
 namespace Rw
 {
-void Atomic::Struct::Read(Chunk *chunk, ChunkHeader *header, Stream *stream)
+void Atomic::Struct::Read(Chunk *chunk, ChunkHeader *, Stream *stream)
 {
     Struct *struc = (Struct *)chunk;
 

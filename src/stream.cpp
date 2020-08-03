@@ -198,7 +198,7 @@ template void Stream::Read(Int32 *val);
 template void Stream::Read(Int16 *val);
 template void Stream::Read(Int8 *val);
 template void Stream::Read(Real *val);
-template void Stream::Read(Bool *val);
+//template void Stream::Read(Bool *val);
 
 void Stream::Read(V3d *v)
 {
@@ -265,7 +265,7 @@ template void Stream::Write(Int32 *val);
 template void Stream::Write(Int16 *val);
 template void Stream::Write(Int8 *val);
 template void Stream::Write(Real *val);
-template void Stream::Write(Bool *val);
+//template void Stream::Write(Bool *val);
 
 void Stream::Write(V3d *v)
 {
@@ -329,7 +329,7 @@ Chunk *Stream::ReadChunk(Chunk *parent)
 
         isComplex = chunkType.isComplex;
 
-        UInt32 parentType = (parent) ? parent->type : ID_NA;
+        UInt32 parentType = (parent) ? parent->type : (UInt32)ID_NA;
 
         if (chunkType.callbacks.find(parentType) != chunkType.callbacks.end())
         {
@@ -448,7 +448,7 @@ void Stream::WriteChunk(Chunk *chunk)
             ChunkType &chunkType = Stream::chunkTypes[header.type];
             ChunkType::Callbacks *callbacks = NULL;
 
-            UInt32 parentType = (chunk->parent) ? chunk->parent->type : ID_NA;
+            UInt32 parentType = (chunk->parent) ? chunk->parent->type : (UInt32)ID_NA;
 
             if (chunkType.callbacks.find(parentType) != chunkType.callbacks.end())
             {

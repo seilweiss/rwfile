@@ -2,7 +2,7 @@
 
 namespace Rw
 {
-void Material::Struct::Read(Chunk *chunk, ChunkHeader *header, Stream *stream)
+void Material::Struct::Read(Chunk *chunk, ChunkHeader *, Stream *stream)
 {
     Struct *struc = (Struct *)chunk;
 
@@ -29,7 +29,7 @@ Material::Struct *Material::GetStruct() const
     return (Struct *)GetChildByType(ID_STRUCT);
 }
 
-void MaterialList::Struct::Read(Chunk *chunk, ChunkHeader *header, Stream *stream)
+void MaterialList::Struct::Read(Chunk *chunk, ChunkHeader *, Stream *stream)
 {
     Struct *struc = (Struct *)chunk;
     Int32 len;

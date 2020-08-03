@@ -2,7 +2,7 @@
 
 namespace Rw
 {
-void HAnimHierarchy::Read(Chunk *chunk, ChunkHeader *header, Stream *stream)
+void HAnimHierarchy::Read(Chunk *chunk, ChunkHeader *, Stream *stream)
 {
     HAnimHierarchy *hanim = (HAnimHierarchy *)chunk;
 
