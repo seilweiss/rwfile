@@ -81,6 +81,9 @@ public:
     Chunk *ReadChunk(Chunk *parent = NULL);
     void WriteChunk(Chunk *chunk);
 
+    void ReadChunkHeader(ChunkHeader *header);
+    void WriteChunkHeader(ChunkHeader *header, UInt32 *outLengthOffset = NULL);
+
 private:
     static std::map<UInt32, ChunkType> chunkTypes;
 
@@ -102,8 +105,5 @@ private:
     };
 
     void Init();
-
-    void ReadChunkHeader(ChunkHeader *header);
-    void WriteChunkHeader(ChunkHeader *header, UInt32 *outLengthOffset = NULL);
 };
 }
